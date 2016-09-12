@@ -55,6 +55,7 @@ function closeToBTDevice(btId,timeSinceLastActivity){
           console.log(Object.keys(arrayList).length);
 
           if(Object.keys(arrayList).length === 1){
+
             console.log("ljud1");
           var audio1 = new Audio('ljud1.wav');
           audio1.play();
