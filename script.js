@@ -13,7 +13,7 @@ function onDocumentReady() {
 //writeUserData("ogge", "Oskarrrr", "oskar@mail.com", "http://mypics.com")
 
 //readAllBluetoothDevicesLarsPhoneHasSeen(300);
-closeToBTDevice("14:32:D1:6F:55:E6",6000);
+closeToBTDevice("78:F8:82:93:EF:4D",60);
 
 }
 
@@ -42,7 +42,7 @@ function closeToBTDevice(btId,timeSinceLastActivity){
       var  friendlyNameDiscoveredDevice = (snapshot.child("friendlyName").val());
       var  MACAddressDiscoveredDevice = (snapshot.child("MACAddress").val());
       var timeDiff = Math.round(nowInSec - lastSeenInSec);
-      //var counter = 0;
+
 
 
 
@@ -57,15 +57,22 @@ function closeToBTDevice(btId,timeSinceLastActivity){
           if(Object.keys(arrayList).length === 1){
 
             console.log("ljud1");
-          var audio1 = new Audio('ljud1.wav');
+          var audio1 = new Audio('ljud2.wav');
+          audio1.addEventListener('ended', function() {
+              this.currentTime = 0;
+              this.play();
+          }, false);
           audio1.play();
+
+
+
         }
-      /*  else if(Object.keys(arrayList).length === 2){
+        else if(Object.keys(arrayList).length === 2){
           console.log("ljud2");
         var audio2 = new Audio('ljud2.wav');
         audio2.play();
 
-      }*/
+      }
         }
 
 
