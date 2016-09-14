@@ -44,6 +44,13 @@ function closeToBTDevice(btId,timeSinceLastActivity){
       var timeDiff = Math.round(nowInSec - lastSeenInSec);
       //var counter = 0;
 
+      function hideElem() {
+          document.getElementById("square1").style.visibility = "hidden";
+      }
+
+      function showElem() {
+          document.getElementById("square1").style.visibility = "visible";
+      }
 
 
       //console.log("diff: " + timeDiff);
@@ -58,6 +65,7 @@ function closeToBTDevice(btId,timeSinceLastActivity){
             console.log("ljud1");
           var audio1 = new Audio('ljud1.wav');
           audio1.play();
+          square1.showElem();
         }
       /*  else if(Object.keys(arrayList).length === 2){
           console.log("ljud2");

@@ -1,22 +1,20 @@
 html {
   box-sizing: border-box;
+  background-color: black;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-#container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+
+.square1{
+  background-color:white;
+  width:320px;
+  height:320px;
+  padding: 10px;
+  margin:auto;
+  margin-top: 200px;
 }
-#test {
-  width: 200px;
-  height: 100px;
-  border: 1px solid black;
-  padding: 1em;
-}
+
 .coloured {
   color: white;
   background: black;
